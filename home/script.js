@@ -6,6 +6,50 @@ import { getFirestore, collection, query, where, getDocs, setDoc, doc, getDoc} f
 // Adicione a biblioteca js-cookie no seu HTML:
 // <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 
+// ========== MODAL DE AVISO (PRIMEIRA VISITA) ==========
+document.addEventListener('DOMContentLoaded', () => {
+    // Verificar se é a primeira visita do usuário
+    const hasVisited = localStorage.getItem('mukekaVisited');
+    
+    if (!hasVisited) {
+        // Mostrar o modal de aviso
+        const warningModal = document.getElementById('warning-modal');
+        if (warningModal) {
+            warningModal.style.display = 'flex';
+        }
+        
+        // Marcar que o usuário visitou
+        localStorage.setItem('mukekaVisited', 'true');
+    }
+    
+    // Fechar o modal de aviso
+    const closeWarningBtn = document.getElementById('close-warning');
+    const understandBtn = document.getElementById('understand-warning');
+    const warningModal = document.getElementById('warning-modal');
+    
+    if (closeWarningBtn) {
+        closeWarningBtn.addEventListener('click', () => {
+            if (warningModal) warningModal.style.display = 'none';
+        });
+    }
+    
+    if (understandBtn) {
+        understandBtn.addEventListener('click', () => {
+            if (warningModal) warningModal.style.display = 'none';
+        });
+    }
+    
+    // Fechar o modal ao clicar fora dele
+    if (warningModal) {
+        warningModal.addEventListener('click', (event) => {
+            if (event.target === warningModal) {
+                warningModal.style.display = 'none';
+            }
+        });
+    }
+});
+// ========== FIM DO MODAL DE AVISO ==========
+
 const firebaseConfig = {
     apiKey: "AIzaSyD_3Uto71G3THDD3FZu_XOceGOanCz47sw",
     authDomain: "mukekajasko.firebaseapp.com",
