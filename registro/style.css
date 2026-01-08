@@ -17,6 +17,7 @@ html, body {
     src: url('OldLondon.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 /* Estilo do título */

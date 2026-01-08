@@ -15,6 +15,7 @@ html, body {
 @font-face {
     font-family: 'OldLondon';
     src: url('OldLondon.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* Contêiner para o título e subtítulo */
@@ -126,7 +127,9 @@ h2 {
     object-fit: cover;
     cursor: pointer;
     border-radius: 16px;
-    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, filter 0.5s ease-in-out; /* Mais suave e mais longa */
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, filter 0.5s ease-in-out;
+    will-change: transform, opacity, filter;
+    contain: layout style paint;
 }
 
 /* Quando a imagem sai (fade-out), aplicamos a opacidade 0 e o desfoque */

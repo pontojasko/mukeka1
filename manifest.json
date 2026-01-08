@@ -1,0 +1,19 @@
+{
+  "name": "Mukeka - Networking Musical",
+  "short_name": "Mukeka",
+  "description": "Plataforma de networking para músicos. Compartilhe e descubra músicas, loops e vocais.",
+  "start_url": "/home/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["music", "entertainment", "social"],
+  "lang": "pt-BR"
+}

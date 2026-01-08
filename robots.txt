@@ -1,0 +1,20 @@
+# Mukeka - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mukeka.vercel.app/sitemap.xml
+
+# Bloquear arquivos de configuração
+Disallow: /*.json$
+Disallow: /mukeka-log-firebase-adminsdk*
+
+# Permitir recursos estáticos
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.woff$
+Allow: /*.woff2$
